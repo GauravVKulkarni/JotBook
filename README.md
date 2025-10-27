@@ -1,5 +1,7 @@
 # JotBook
 
+https://jot-book.vercel.app
+
 <img src="Screenshot.png" alt="JotBook Logo" width="840" height="482" />
 
 A beautifully simple note-taking progressive web app for desktop built with React and TypeScript that uses local storage and works offline.
