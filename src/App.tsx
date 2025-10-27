@@ -17,7 +17,26 @@ const sortNotesByLastEdited = (notesArray: Note[]) => {
 function App() {
   const [notes, setNotes] = useState<Note[]>(() => {
     const savedNotes = localStorage.getItem('notes');
-    return savedNotes ? sortNotesByLastEdited(JSON.parse(savedNotes)) : [];
+    if (savedNotes) return sortNotesByLastEdited(JSON.parse(savedNotes));
+
+    // initialize with a Getting Started note on first run
+    const welcome: Note = {
+      id: Date.now().toString(),
+      title: 'Getting Started',
+      body: `Welcome to JotBook!
+
+Here are a few tips to get you started:
+- Click New Note Button to create a note.
+- Start writing note — changes are saved automatically.
+- Use the three-dot menu to access archive or delete options.
+- Archived notes are available under "Archive" and can be unarchived from the three dot menu.
+
+This app stores your notes locally in your browser using localStorage so they stay between sessions.
+Enjoy taking notes!`,
+      lastEdited: Date.now()
+    };
+
+    return [welcome];
   });
   
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(() => {

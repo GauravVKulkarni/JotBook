@@ -20,11 +20,17 @@ nav {
     gap: var(--gap-sm);
 }
 
+.top-controls {
+    /* allow children to shrink without forcing layout overflow */
+    overflow: hidden;
+    min-width: 0;
+}
+
 .icon-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--surface);
+    background-color: transparent;
     color: var(--text);
     border-radius: var(--br-md);
     border: none;
@@ -174,7 +180,9 @@ a.active:hover {
 }
 
 .sidebar nav .top-controls > * {
-    transition: transform 200ms ease, opacity 200ms ease;
+    transition: transform 200ms ease, opacity 200ms ease, width 180ms ease, padding 180ms ease, margin 180ms ease;
+    box-sizing: border-box;
+    /* allow explicit width transitions */
 }
 
 .container.sidebar-collapsed .sidebar nav > *:not(.top-controls) {
@@ -187,16 +195,16 @@ a.active:hover {
     transform: translateX(-6px);
     opacity: 0;
     pointer-events: none;
+    /* collapse dimensions to avoid temporary overflow during animation */
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .container.sidebar-collapsed .sidebar .top-controls > .sidebar-toggle-btn {
     opacity: 1;
     transform: none;
     pointer-events: auto;
-}
-
-.container.sidebar-collapsed .sidebar nav > *:not(.sidebar-toggle-btn) {
-    display: none;
 }
 
 .container.sidebar-collapsed .sidebar .sidebar-toggle-btn {

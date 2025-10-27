@@ -71,6 +71,7 @@ const Sidebar: React.FC<SidebarProps> = ({ notes, selectedNoteId, onNoteSelect, 
                         className="icon-btn"
                         onClick={onCreateNote}
                         aria-label="Create note"
+                        title='New Note'
                     >
                         <img src={newNoteIcon} alt="new" className="icon toggle-icon" />
                     </button>
