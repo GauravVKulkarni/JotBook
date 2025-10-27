@@ -23,6 +23,7 @@ const Content: React.FC<ContentProps> = ({ note, onTitleChange, onBodyChange }) 
         id="note-heading-area" 
         placeholder="Add Title"
         value={note?.title ?? ''}
+        maxLength={40}
         onChange={(e) => onTitleChange?.(e.target.value)}
       />
         </div>

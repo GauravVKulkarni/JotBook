@@ -41,7 +41,7 @@ function App() {
   const handleCreateNote = () => {
     const newNote: Note = {
       id: Date.now().toString(),
-      title: 'Untitled Note',
+      title: '',
       body: '',
       lastEdited: Date.now()
     };

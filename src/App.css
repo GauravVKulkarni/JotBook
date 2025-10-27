@@ -7,3 +7,8 @@
     background-color: var(--bg);
     color: var(--text);
 }
+
+/* When sidebar is collapsed we'll make the first column 0 so content expands */
+.container.sidebar-collapsed {
+    grid-template-columns: 56px 1fr;
+}

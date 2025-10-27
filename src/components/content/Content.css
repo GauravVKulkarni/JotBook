@@ -19,10 +19,10 @@ textarea {
     color: var(--text);
     resize: none;
     border: var(--border-invisible);
-    border-radius: var(--br-md);
     font-family: var(--font-family);
     font-size: 1rem;
     line-height: var(--content-line-height);
+    letter-spacing: var(--content-letter-spacing);
 }
 
 textarea:focus {
@@ -44,6 +44,7 @@ textarea::placeholder {
     overflow-y: auto;
     resize: none;
     box-sizing: border-box;
+    border-bottom: var(--border-light);
 }
 
 #note-body-area {

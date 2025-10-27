@@ -18,10 +18,12 @@
   --br-md : 0.5rem;
   --br-lg : 1rem;
 
-  --border-regular : 1px solid #888888;
+  --border-light : 1px solid #333333;
+  --border-regular : 1px solid #444444;
   --border-invisible : 1px solid transparent;
 
   --content-line-height : 1.8;
+  --content-letter-spacing : 0.02rem;
 
   --gap-sm : 0.5rem;
   --gap-md : 1rem;
@@ -48,7 +50,7 @@ html {
 }
 
 img.icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--icon-md);
+  height: var(--icon-md);
   filter: invert(1) sepia(0) saturate(0) hue-rotate(180deg) brightness(1.2);
 }
