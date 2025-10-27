@@ -8,6 +8,7 @@ interface Note {
   title: string;
   body: string;
   lastEdited: number;
+  archived?: boolean;
 }
 
 const sortNotesByLastEdited = (notesArray: Note[]) => {
@@ -31,7 +32,7 @@ Here are a few tips to get you started:
 - Use the three-dot menu to access archive or delete options.
 - Archived notes are available under "Archive" and can be unarchived from the three dot menu.
 
-This app stores your notes locally in your browser using localStorage so they stay between sessions.
+This app works offline (even on reload) and stores your notes locally in your browser using localStorage so they stay between sessions.
 Enjoy taking notes!`,
       lastEdited: Date.now()
     };
@@ -58,6 +59,19 @@ Enjoy taking notes!`,
   }, [selectedNoteId]);
 
   const handleCreateNote = () => {
+    // Check for any existing empty note (unarchived)
+    const emptyNote = notes.find(note => 
+      !note.archived && 
+      note.title.trim() === '' && 
+      note.body.trim() === ''
+    );
+    
+    // If empty note exists, select it instead of creating new
+    if (emptyNote) {
+      setSelectedNoteId(emptyNote.id);
+      return;
+    }
+
     const newNote: Note = {
       id: Date.now().toString(),
       title: '',

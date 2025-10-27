@@ -114,7 +114,6 @@ a:hover {
 a.active {
     background-color: var(--highlighted-surface);
     color: var(--text);
-    border: var(--border-invisible);
 }
 
 a.active:hover {
@@ -126,7 +125,6 @@ a.active:hover {
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin-right: var(--pd-sm);
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.2s;
