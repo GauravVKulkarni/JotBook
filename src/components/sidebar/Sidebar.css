@@ -86,12 +86,6 @@ nav {
     position: relative;
 }
 
-/* .sidebar-note-row.archived {
-    background: var(--bg);
-    font-size: 0.95rem;
-    z-index: 20;
-} */
-
 a {
     flex: 1;
     text-decoration: none;

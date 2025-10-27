@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# JotBook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="Screenshot.png" alt="JotBook Logo" width="840" height="482" />
 
-Currently, two official plugins are available:
+A beautifully simple note-taking progressive web app for desktop built with React and TypeScript that uses local storage and works offline.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- 📝 Clean and minimalist note-taking interface
+- 💾 Automatic saving with local storage persistence
+- 📱 PWA support for offline access and installation
+- 🗑️ Archive/unarchive functionality
+- 🌓 Clean, modern UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 16.0 or higher
+- npm or pnpm
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository
+```bash
+git clone https://github.com/GauravVKulkarni/JotBook.git
+cd JotBook
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies
+```bash
+npm install
+# or
+pnpm install
 ```
+
+3. Start the development server
+```bash
+npm run dev
+# or
+pnpm dev
+```
+
+### Building for Production
+
+```bash
+npm run build
+# or
+pnpm build
+```
+
+## Technology Stack
+
+- ⚛️ React 18
+- 📘 TypeScript
+- ⚡ Vite
+- 🌐 PWA (Progressive Web App)
+- 📦 Local Storage
+- 🎨 CSS Modules
+
+## Features in Detail
+
+### Note Management
+- Create unlimited notes
+- Auto-save functionality
+- Smart empty note handling
+- Note archival system
+
+### User Interface
+- Clean, minimalist design
+- Intuitive navigation
+- Smooth transitions
+
+### PWA Features
+- Offline capability
+- Install as desktop app
+- Quick loading
+- Auto-updates
+- Cache management
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
