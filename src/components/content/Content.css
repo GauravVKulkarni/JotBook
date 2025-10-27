@@ -1,0 +1,51 @@
+main {
+    width: 100%;
+    height: 100%;
+    padding: var(--pd-lg);
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-y: scroll;
+    line-height: var(--content-line-height);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--pd-md);
+}
+
+textarea {
+    width: 100%;
+    padding: var(--pd-md);
+    background-color: var(--bg);
+    color: var(--text);
+    resize: none;
+    border: var(--border-invisible);
+    border-radius: var(--br-md);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    line-height: var(--content-line-height);
+}
+
+textarea:focus {
+    outline: none;
+    border: var(--border-invisible);
+}
+
+textarea::placeholder {
+    color: var(--muted-text);
+}
+
+#note-heading-area {
+    min-height: 2.2rem;
+    max-height: 4.5rem;
+    height: auto;
+    padding: 0 var(--pd-md);
+    font-size: 1.5rem;
+    font-weight: bold;
+    overflow-y: auto;
+    resize: none;
+    box-sizing: border-box;
+}
+
+#note-body-area {
+    height: 100%;
+}

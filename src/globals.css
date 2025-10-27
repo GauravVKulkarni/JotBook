@@ -1,0 +1,54 @@
+:root{
+
+  --font-family : 'Inter', sans-serif;
+
+  --bg : #222222;
+  --surface : #333333;
+  --highlighted-surface : #555555;
+  --text : #eeeeee;
+  --muted-text : #aaaaaa;
+  --icon-color : #dddddd;
+
+  --pd-sm : 0.5rem;
+  --pd-md : 1rem;
+  --pd-lg : 1.5rem;
+  --pd-xl : 2rem;
+
+  --br-sm : 0.25rem;
+  --br-md : 0.5rem;
+  --br-lg : 1rem;
+
+  --border-regular : 1px solid #888888;
+  --border-invisible : 1px solid transparent;
+
+  --content-line-height : 1.8;
+
+  --gap-sm : 0.5rem;
+  --gap-md : 1rem;
+  --gap-lg : 1.5rem;
+
+  --icon-sm : 1rem;
+  --icon-md : 1.5rem;
+  --icon-lg : 2rem;
+
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg);
+  font-family: var(--font-family);
+}
+
+img.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1) sepia(0) saturate(0) hue-rotate(180deg) brightness(1.2);
+}
