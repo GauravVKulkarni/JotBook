@@ -10,7 +10,7 @@ A beautifully simple note-taking progressive web app for desktop built with Reac
 - 💾 Automatic saving with local storage persistence
 - 📱 PWA support for offline access and installation
 - 🗑️ Archive/unarchive functionality
-- 🌓 Clean, modern UI
+- 🌟 Clean, modern UI
 
 ## Getting Started
 
