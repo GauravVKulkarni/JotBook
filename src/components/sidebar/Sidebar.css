@@ -27,6 +27,8 @@ nav {
 }
 
 .icon-btn {
+    height: 2.5rem;
+    width: 2.5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -34,14 +36,17 @@ nav {
     color: var(--text);
     border-radius: var(--br-md);
     border: none;
-    padding: var(--pd-sm);
     cursor: pointer;
-    width: auto;
     transition: background 180ms ease, transform 180ms ease;
 }
 
 .icon-btn:hover {
     background-color: var(--highlighted-surface);
+}
+
+.sidebar-toggle-btn .icon{
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
 }
 
 .archive-toggle-btn {
@@ -199,9 +204,27 @@ a.active:hover {
     pointer-events: auto;
 }
 
-.container.sidebar-collapsed .sidebar .sidebar-toggle-btn {
-    width: 100%;
+/* Keep the toggle button dimensions static to avoid a brief collapse/expand flicker
+   when toggling the sidebar. We remove width/padding/margin from the transition list
+   and explicitly disable transitions in the collapsed state. */
+.sidebar nav .top-controls > .sidebar-toggle-btn {
+    /* only animate transform & opacity for this element */
+    transition: transform 200ms ease, opacity 200ms ease;
+    box-sizing: border-box;
 }
+
+.container.sidebar-collapsed .sidebar .sidebar-toggle-btn {
+    /* ensure the toggle occupies a stable width inside the collapsed sidebar */
+    width: 100%;
+    padding: var(--pd-sm);
+    margin: 0;
+    /* disable layout transitions that cause the flicker */
+    transition: none !important;
+}
+
+/* .container.sidebar-collapsed .sidebar .sidebar-toggle-btn {
+    width: 100%;
+} */
 
 .container.sidebar-collapsed .content,
 .container.sidebar-collapsed main.content {
