@@ -1,15 +1,11 @@
 main {
     width: 100%;
     height: 100%;
-    padding: var(--pd-lg);
-    background-color: var(--bg);
-    color: var(--text);
-    overflow-y: scroll;
-    line-height: var(--content-line-height);
-
+    padding: var(--pd-sm);
+    
     display: flex;
     flex-direction: column;
-    gap: var(--pd-md);
+    overflow-y: scroll;
 }
 
 textarea {
@@ -20,9 +16,7 @@ textarea {
     resize: none;
     border: var(--border-invisible);
     font-family: var(--font-family);
-    font-size: 1rem;
-    line-height: var(--content-line-height);
-    letter-spacing: var(--content-letter-spacing);
+    
 }
 
 textarea:focus {
@@ -35,18 +29,22 @@ textarea::placeholder {
 }
 
 #note-heading-area {
-    min-height: 2.2rem;
-    max-height: 4.5rem;
-    height: auto;
+    height: 2.5rem;
+    width: 100%;
     padding: 0 var(--pd-md);
     font-size: 1.5rem;
     font-weight: bold;
-    overflow-y: auto;
-    resize: none;
-    box-sizing: border-box;
+    line-height: 1;
+    letter-spacing: var(--content-letter-spacing);
+    align-content: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     border-bottom: var(--border-light);
 }
 
 #note-body-area {
     height: 100%;
+    font-size: 1rem;
+    line-height: var(--content-line-height);
+    letter-spacing: var(--content-letter-spacing);
 }
